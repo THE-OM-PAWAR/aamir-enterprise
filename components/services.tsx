@@ -109,41 +109,41 @@ export default function TrainingsSection() {
           </div>
 
           {/* Services - Unique Split Layout */}
-          <div className="space-y-16 md:space-y-24 lg:space-y-32">
+          <div className="space-y-8 md:space-y-10 lg:space-y-12">
             {services.map((service, index) => {
               const isEven = index % 2 === 0;
-              const initialX = isEven ? -100 : 100;
+              const initialX = isEven ? -150 : 150;
               
               return (
                 <motion.div
                   key={service.number}
-                  className="relative group"
+                  className="relative group overflow-hidden min-h-[70vh] flex items-center justify-center"
                   initial={{ opacity: 0, x: initialX }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ amount: 0.3, margin: '-50px' }}
-                  transition={{ 
-                    duration: 1.1, 
+                  viewport={{ amount: 0.25, margin: '-80px' }}
+                  transition={{
+                    duration: 1.2,
                     ease: [0.25, 0.1, 0.25, 1],
-                    opacity: { duration: 0.8 }
+                    opacity: { duration: 0.9 }
                   }}
                 >
-                  <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-8 md:gap-12 lg:gap-16`}>
+                  <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-4 md:gap-6 lg:gap-8`}>
                     {/* Text Content Side */}
-                    <div className={`flex-1 w-full ${isEven ? 'lg:pr-8' : 'lg:pl-8'}`}>
-                      <div className="space-y-6">
+                    <div className={`flex-1 w-full ${isEven ? 'lg:pr-4' : 'lg:pl-4'}`}>
+                      <div className="space-y-3 md:space-y-4">
                         {/* Number */}
                         <motion.div
-                          initial={{ opacity: 0, scale: 0.85 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          viewport={{ amount: 0.3 }}
-                          transition={{ 
-                            duration: 0.8, 
+                          initial={{ opacity: 0, scale: 0.8, x: isEven ? -40 : 40 }}
+                          whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                          viewport={{ amount: 0.25 }}
+                          transition={{
+                            duration: 0.9,
                             ease: [0.25, 0.1, 0.25, 1],
-                            delay: 0.15
+                            delay: 0.1
                           }}
                         >
                           <div
-                            className="text-8xl md:text-9xl lg:text-[12rem] font-black text-white/5 group-hover:text-red-500/10 transition-colors duration-500 leading-none"
+                            className="text-7xl md:text-7xl lg:text-8xl xl:text-8xl font-black text-white/5 group-hover:text-red-500/10 transition-colors duration-500 leading-none"
                             style={{
                               fontFamily: 'var(--font-grotesk), Impact, Arial Black, sans-serif',
                               lineHeight: 0.8,
@@ -155,39 +155,39 @@ export default function TrainingsSection() {
 
                         {/* Title */}
                         <motion.div
-                          initial={{ opacity: 0, y: 30 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ amount: 0.3 }}
-                          transition={{ 
-                            duration: 0.9, 
+                          initial={{ opacity: 0, y: 40, x: isEven ? -30 : 30 }}
+                          whileInView={{ opacity: 1, y: 0, x: 0 }}
+                          viewport={{ amount: 0.25 }}
+                          transition={{
+                            duration: 1,
                             ease: [0.25, 0.1, 0.25, 1],
-                            delay: 0.2
+                            delay: 0.15
                           }}
                         >
-                          <h3 
-                            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black uppercase leading-none tracking-tight text-white mb-3 group-hover:text-red-500 transition-colors duration-300"
+                          <h3
+                            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black uppercase leading-none tracking-tight text-white mb-1.5 group-hover:text-red-500 transition-colors duration-300"
                             style={{
                               fontFamily: 'var(--font-grotesk), Impact, Arial Black, sans-serif',
                               letterSpacing: '-0.02em',
                             }}
                           >
                             {service.title}
-                            <span className="block text-white/40 group-hover:text-white/60 transition-colors duration-300 text-3xl md:text-4xl lg:text-5xl xl:text-6xl mt-2">
+                            <span className="block text-white/40 group-hover:text-white/60 transition-colors duration-300 text-3xl md:text-3xl lg:text-5xl xl:text-5xl mt-1">
                               {service.subtitle}
                             </span>
                           </h3>
                         </motion.div>
 
                         {/* Description */}
-                        <motion.p 
-                          className="text-base md:text-lg text-white/60 font-light max-w-xl leading-relaxed group-hover:text-white/80 transition-colors duration-300"
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ amount: 0.3 }}
-                          transition={{ 
-                            duration: 0.8, 
+                        <motion.p
+                          className="text-sm md:text-base text-white/60 font-light max-w-xl leading-relaxed group-hover:text-white/80 transition-colors duration-300"
+                          initial={{ opacity: 0, y: 30, x: isEven ? -20 : 20 }}
+                          whileInView={{ opacity: 1, y: 0, x: 0 }}
+                          viewport={{ amount: 0.25 }}
+                          transition={{
+                            duration: 0.9,
                             ease: [0.25, 0.1, 0.25, 1],
-                            delay: 0.3
+                            delay: 0.25
                           }}
                         >
                           {service.description}
@@ -196,29 +196,29 @@ export default function TrainingsSection() {
                         {/* Red Accent Line */}
                         <motion.div
                           className="h-px bg-red-500"
-                          initial={{ width: 0 }}
-                          whileInView={{ width: '64px' }}
-                          viewport={{ amount: 0.3 }}
+                          initial={{ width: 0, opacity: 0 }}
+                          whileInView={{ width: '56px', opacity: 1 }}
+                          viewport={{ amount: 0.25 }}
                           transition={{ 
-                            duration: 1, 
+                            duration: 1.1, 
                             ease: [0.25, 0.1, 0.25, 1],
-                            delay: 0.4
+                            delay: 0.35
                           }}
                         />
                       </div>
                     </div>
 
                     {/* Image Side */}
-                    <div className="flex-1 w-full relative overflow-hidden">
+                    <div className="flex-1 w-full relative overflow-visible">
                       <motion.div
-                        className="relative aspect-[4/3] lg:aspect-[3/4] overflow-hidden"
-                        initial={{ opacity: 0, scale: 0.92, y: 20 }}
-                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                        viewport={{ amount: 0.3 }}
+                        className="relative aspect-[4/3] lg:aspect-[3/2] overflow-hidden"
+                        initial={{ opacity: 0, scale: 0.88, y: 40, x: isEven ? 30 : -30 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0, x: 0 }}
+                        viewport={{ amount: 0.25 }}
                         transition={{ 
-                          duration: 1, 
+                          duration: 1.1, 
                           ease: [0.25, 0.1, 0.25, 1],
-                          delay: 0.2
+                          delay: 0.15
                         }}
                       >
                         <img
@@ -232,9 +232,9 @@ export default function TrainingsSection() {
                       
                       {/* Decorative element */}
                       <motion.div
-                        className="absolute -bottom-4 -right-4 w-24 h-24 border border-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                        initial={{ rotate: 0 }}
-                        whileHover={{ rotate: 45 }}
+                        className="absolute -bottom-3 -right-3 w-16 h-16 border border-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        initial={{ rotate: 0, scale: 0.8 }}
+                        whileHover={{ rotate: 45, scale: 1 }}
                         transition={{ duration: 0.5 }}
                       />
                     </div>
@@ -243,14 +243,14 @@ export default function TrainingsSection() {
                   {/* Connecting line between items (except last) */}
                   {index < services.length - 1 && (
                     <motion.div
-                      className="hidden lg:block absolute left-1/2 -bottom-12 -translate-x-1/2 w-px h-16 bg-white/5"
+                      className="hidden lg:block absolute left-1/2 -bottom-6 -translate-x-1/2 w-px h-8 bg-white/5"
                       initial={{ height: 0, opacity: 0 }}
-                      whileInView={{ height: 64, opacity: 1 }}
-                      viewport={{ amount: 0.3 }}
-                      transition={{ 
-                        duration: 1, 
+                      whileInView={{ height: 32, opacity: 1 }}
+                      viewport={{ amount: 0.25 }}
+                      transition={{
+                        duration: 1.1,
                         ease: [0.25, 0.1, 0.25, 1],
-                        delay: 0.5
+                        delay: 0.4
                       }}
                     />
                   )}
