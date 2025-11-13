@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 3%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 0% 8%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.5rem;
+    --red-accent: 0 84% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-black text-white font-light;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Smooth animations */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Typography System */
+.text-display {
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 0.9;
+}
+
+.text-heading {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+}
+
+.text-body {
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+}
+
+.text-caption {
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #666666 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Red accent gradient */
+.text-red-gradient {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Minimal hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-white text-black px-6 py-3 font-medium text-sm tracking-wider uppercase;
+  @apply hover:bg-gray-100 transition-all duration-300;
+}
+
+.btn-primary-red {
+  @apply bg-red-500 text-white px-6 py-3 font-medium text-sm tracking-wider uppercase;
+  @apply hover:bg-red-600 transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply border border-white/20 text-white px-6 py-3 font-light text-sm tracking-wider uppercase;
+  @apply hover:border-white/40 hover:bg-white/5 transition-all duration-300;
+}
+
+.btn-secondary-red {
+  @apply border border-red-500/50 text-red-500 px-6 py-3 font-light text-sm tracking-wider uppercase;
+  @apply hover:border-red-500 hover:bg-red-500/10 transition-all duration-300;
+}
+
+/* Grid system */
+.container-custom {
+  @apply max-w-7xl mx-auto px-6 lg:px-8;
+}
+
+/* Minimal dividers */
+.divider {
+  @apply w-12 h-px bg-white/20;
+}
+
+.divider-red {
+  @apply w-12 h-px bg-red-500/50;
+}
+
+.divider-vertical {
+  @apply w-px h-12 bg-white/20;
+}
+
+/* Red accent elements */
+.red-dot {
+  @apply w-2 h-2 bg-red-500 rounded-full;
+}
+
+.red-line {
+  @apply w-8 h-px bg-red-500;
+}
