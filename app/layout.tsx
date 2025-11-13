@@ -5,9 +5,9 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Gymnacity - Find Your Strength | Premium Gym & Fitness',
-  description: 'Transform your body and mind at Gymnacity. Premium gym facilities, expert personal training, and fitness classes designed to help you achieve your goals.',
-  keywords: 'gym, fitness, personal training, workout, strength training, group fitness',
+  title: 'Aamir Enterprises - Designing Ceilings that Define Spaces',
+  description: 'Transform your spaces with Aamir Enterprises. Premium false ceiling designs, POP work, PVC panels, and decorative lighting solutions that redefine interiors.',
+  keywords: 'false ceiling, POP design, PVC panels, decorative lighting, interior design, ceiling contractors, gypsum ceiling',
 };
 
 export default function RootLayout({

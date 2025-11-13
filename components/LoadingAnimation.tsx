@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Dumbbell } from 'lucide-react';
+import { Lightbulb } from 'lucide-react';
 
 export default function LoadingAnimation() {
   const [isLoading, setIsLoading] = useState(true);
@@ -50,7 +50,7 @@ export default function LoadingAnimation() {
               }}
             >
               <div className="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center relative overflow-hidden">
-                <Dumbbell className="h-10 w-10 text-white" />
+                <Lightbulb className="h-10 w-10 text-white" />
                 
                 {/* Pulsing Ring */}
                 <motion.div
@@ -89,7 +89,7 @@ export default function LoadingAnimation() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 1.8 }}
                 >
-                  GYMNA
+                  AAMIR
                 </motion.span>
                 <motion.span
                   className="inline-block text-red-500"
@@ -97,7 +97,7 @@ export default function LoadingAnimation() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 2.0 }}
                 >
-                  CITY
+                  ENTERPRISES
                 </motion.span>
               </motion.h1>
 
@@ -108,7 +108,7 @@ export default function LoadingAnimation() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 2.2 }}
               >
-                Find Your Strength
+                Designing Ceilings that Define Spaces
               </motion.p>
             </motion.div>
 

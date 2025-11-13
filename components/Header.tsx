@@ -17,9 +17,9 @@ export default function Header() {
   }, []);
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'Trainings', href: '/#trainings' },
+    { name: 'Services', href: '/#trainings' },
     { name: 'Gallery', href: '/#gallery' },
-    { name: 'Membership', href: '/#membership' },
+    { name: 'Packages', href: '/#membership' },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -45,7 +45,7 @@ export default function Header() {
             }`}
           >
             <div className="w-1.5 h-1.5 bg-red-500 rounded-full"></div>
-            GYMNACITY
+            AAMIR ENTERPRISES
           </button>
 
           {/* Desktop Navigation */}
@@ -85,7 +85,7 @@ export default function Header() {
                 ? 'bg-white text-black hover:bg-gray-100' 
                 : 'bg-black text-white hover:bg-gray-800'
             }`}>
-              <span className="relative z-10">Join Today</span>
+              <span className="relative z-10">Get Quote</span>
               <div className="absolute top-0 right-0 w-1 h-full bg-red-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
             </button>
           </div>
@@ -129,7 +129,7 @@ export default function Header() {
                   ? 'bg-white text-black hover:bg-gray-100' 
                   : 'bg-black text-white hover:bg-gray-800'
               }`}>
-                Join Today
+                Get Quote
               </button>
             </div>
           </div>

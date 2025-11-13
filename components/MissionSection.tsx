@@ -25,14 +25,14 @@ export default function MissionSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-black relative overflow-hidden" id="about">
-      {/* Animated background elements */}
+    <section ref={sectionRef} className="py-12 bg-black relative overflow-hidden" id="about">
+      {/* Minimal animated background element */}
       <div className="absolute inset-0 opacity-5">
         <motion.div
-          className="absolute top-1/4 left-1/4 w-2 h-2 bg-red-500 rounded-full"
+          className="absolute top-1/2 right-1/4 w-1 h-1 bg-red-500 rounded-full"
           animate={{ 
             scale: [1, 1.5, 1],
-            opacity: [0.3, 0.8, 0.3]
+            opacity: [0.3, 0.6, 0.3]
           }}
           transition={{ 
             duration: 3,
@@ -40,152 +40,98 @@ export default function MissionSection() {
             ease: "easeInOut"
           }}
         />
-        <motion.div
-          className="absolute top-3/4 right-1/3 w-1 h-1 bg-red-500 rounded-full"
-          animate={{ 
-            scale: [1, 2, 1],
-            opacity: [0.2, 0.6, 0.2]
-          }}
-          transition={{ 
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
-        />
-        <motion.div
-          className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-red-500 rounded-full"
-          animate={{ 
-            scale: [1, 1.8, 1],
-            opacity: [0.4, 0.9, 0.4]
-          }}
-          transition={{ 
-            duration: 2.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        />
       </div>
 
       <div className="container-custom relative z-10">
         <motion.div 
-          className="max-w-4xl mx-auto text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 1, ease: [0.4, 0.0, 0.2, 1] }}
+          className="max-w-3xl mx-auto text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, ease: [0.4, 0.0, 0.2, 1] }}
         >
           {/* Minimal red accent line */}
           <motion.div 
-            className="flex justify-center mb-8"
+            className="flex justify-center mb-4"
             initial={{ width: 0 }}
-            animate={isVisible ? { width: 48 } : { width: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            animate={isVisible ? { width: 32 } : { width: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="h-px bg-red-500"></div>
           </motion.div>
 
-          {/* Main statement - split into animated words */}
-          <div className="space-y-4 mb-12">
+          {/* Main statement */}
+          <div className="mb-6">
             <motion.h2 
-              className="text-display text-4xl md:text-6xl lg:text-7xl text-white leading-tight"
+              className="text-display text-3xl md:text-4xl lg:text-5xl text-white leading-tight"
               initial={{ opacity: 0 }}
               animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
             >
               <motion.span 
                 className="block"
-                initial={{ opacity: 0, x: -20 }}
-                animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
+                initial={{ opacity: 0, x: -10 }}
+                animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
               >
-                FITNESS
+                DESIGN
               </motion.span>
-              <motion.span 
+              <motion.span
                 className="block text-white/30"
-                initial={{ opacity: 0, x: 20 }}
-                animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-                transition={{ duration: 0.6, delay: 0.9 }}
+                initial={{ opacity: 0, x: 10 }}
+                animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 10 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
               >
-                FOR EVERYONE
+                FOR EVERY SPACE
               </motion.span>
             </motion.h2>
           </div>
 
           {/* Minimal description */}
           <motion.p 
-            className="text-body text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.8, delay: 1.1 }}
+            className="text-body text-base md:text-lg text-white/60 max-w-xl mx-auto leading-relaxed mb-6"
+            initial={{ opacity: 0, y: 10 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
           >
-            Whether you're starting your journey or pushing your limits, 
-            we provide the space and support you need to succeed.
+            From residential to commercial projects,
+            we create ceiling solutions that enhance aesthetics and functionality.
           </motion.p>
 
-          {/* Animated CTA with red accent */}
+          {/* Minimal CTA */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.6, delay: 1.3 }}
+            initial={{ opacity: 0 }}
+            animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
           >
             <motion.button 
-              className="group relative bg-red-500 text-white px-8 py-4 font-medium text-sm tracking-wider uppercase overflow-hidden"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="bg-red-500 text-white px-6 py-3 font-medium text-sm tracking-wider uppercase"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
-              <motion.span 
-                className="relative z-10"
-                whileHover={{ x: 2 }}
-                transition={{ duration: 0.2 }}
-              >
-                Begin Journey
-              </motion.span>
-              
-              {/* Animated background */}
-              <motion.div
-                className="absolute inset-0 bg-red-600"
-                initial={{ x: '-100%' }}
-                whileHover={{ x: 0 }}
-                transition={{ duration: 0.3 }}
-              />
-              
-              {/* Red accent dot */}
-              <motion.div
-                className="absolute top-1/2 right-3 w-1 h-1 bg-white rounded-full"
-                animate={{ 
-                  scale: [1, 1.5, 1],
-                  opacity: [0.7, 1, 0.7]
-                }}
-                transition={{ 
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
+              Start Your Project
             </motion.button>
           </motion.div>
 
-          {/* Subtle stats or indicators */}
+          {/* Compact stats */}
           <motion.div 
-            className="flex justify-center items-center gap-8 mt-16 text-white/30"
+            className="flex justify-center items-center gap-6 mt-8 text-white/30"
             initial={{ opacity: 0 }}
             animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 0.8, delay: 1.5 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
           >
-            <div className="flex items-center gap-2">
-              <div className="w-1 h-1 bg-red-500/50 rounded-full"></div>
-              <span className="text-caption text-xs">500+ MEMBERS</span>
+            <div className="flex items-center gap-1.5">
+              <div className="w-0.5 h-0.5 bg-red-500/50 rounded-full"></div>
+              <span className="text-caption text-xs">500+ PROJECTS</span>
             </div>
-            <div className="w-px h-4 bg-white/10"></div>
-            <div className="flex items-center gap-2">
-              <div className="w-1 h-1 bg-red-500/50 rounded-full"></div>
-              <span className="text-caption text-xs">24/7 ACCESS</span>
+            <div className="w-px h-3 bg-white/10"></div>
+            <div className="flex items-center gap-1.5">
+              <div className="w-0.5 h-0.5 bg-red-500/50 rounded-full"></div>
+              <span className="text-caption text-xs">15+ YEARS</span>
             </div>
-            <div className="w-px h-4 bg-white/10"></div>
-            <div className="flex items-center gap-2">
-              <div className="w-1 h-1 bg-red-500/50 rounded-full"></div>
-              <span className="text-caption text-xs">EXPERT TRAINERS</span>
+            <div className="w-px h-3 bg-white/10"></div>
+            <div className="flex items-center gap-1.5">
+              <div className="w-0.5 h-0.5 bg-red-500/50 rounded-full"></div>
+              <span className="text-caption text-xs">EXPERT CRAFTSMEN</span>
             </div>
           </motion.div>
         </motion.div>

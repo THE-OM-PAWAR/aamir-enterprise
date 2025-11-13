@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import Link from 'next/link';
-import { Dumbbell, Instagram, Linkedin, Globe, Mail, Home, Phone } from 'lucide-react';
+import { Lightbulb, Instagram, Linkedin, Globe, Mail, Home, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -37,8 +37,8 @@ const Footer = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                READY TO TRANSFORM?<br />
-                <span className="text-gray-800">LET'S START TODAY!</span>
+                READY TO TRANSFORM YOUR SPACE?<br />
+                <span className="text-gray-800">LET'S CREATE MAGIC!</span>
               </motion.h2>
               
               <motion.p 
@@ -48,8 +48,8 @@ const Footer = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                Join the ultimate fitness experience at Gymnacity. 
-                State-of-the-art equipment, expert trainers, and a supportive community await.
+                Experience premium ceiling solutions with Aamir Enterprises.
+                Expert craftsmanship, innovative designs, and quality materials await.
               </motion.p>
             </div>
 
@@ -70,7 +70,7 @@ const Footer = () => {
                     letterSpacing: '0.1em',
                   }}
                 >
-                  <span className="relative z-10">JOIN NOW</span>
+                  <span className="relative z-10">GET QUOTE</span>
                   <motion.div
                     className="absolute inset-0 bg-red-600"
                     initial={{ x: '-100%' }}
@@ -105,9 +105,9 @@ const Footer = () => {
               <nav className="space-y-4">
                 {[
                   { href: '/', label: 'HOME', isLink : true},
-                  { href: '/#trainings', label: 'TRAININGS' },
+                  { href: '/#trainings', label: 'SERVICES' },
                   { href: '/#gallery', label: 'GALLERY' },
-                  { href: '/#membership', label: 'MEMBERSHIP' },
+                  { href: '/#membership', label: 'PACKAGES' },
                   { href: '/contact', label: 'CONTACT', isLink: true },
                 ].map((link, index) => (
                   <motion.div
@@ -180,10 +180,10 @@ const Footer = () => {
                 viewport={{ once: true }}
               >
                 {[
-                  { icon: Instagram, href: 'https://www.instagram.com/gymnacity', label: 'Instagram' },
+                  { icon: Instagram, href: 'https://www.instagram.com/aamirenterprises', label: 'Instagram' },
                   { icon: Linkedin, href: '#', label: 'LinkedIn' },
                   { icon: Globe, href: '#', label: 'Website' },
-                  { icon: Mail, href: 'mailto:info@gymnacity.com', label: 'Email' },
+                  { icon: Mail, href: 'mailto:info@aamirenterprises.com', label: 'Email' },
                 ].map((social, index) => (
                   <motion.a
                     key={social.label}
@@ -245,7 +245,7 @@ const Footer = () => {
                   transition={{ duration: 0.3 }}
                 >
                   <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center group-hover:bg-red-500 transition-colors duration-300">
-                    <Dumbbell className="h-6 w-6 text-white transition-colors duration-300" />
+                    <Lightbulb className="h-6 w-6 text-white transition-colors duration-300" />
                   </div>
                 </motion.div>
                 
@@ -258,8 +258,8 @@ const Footer = () => {
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <span className="text-black group-hover:text-red-500 transition-colors duration-300">GYMNA</span>
-                  <span className="text-gray-800 group-hover:text-black transition-colors duration-300">CITY</span>
+                  <span className="text-black group-hover:text-red-500 transition-colors duration-300">AAMIR</span>
+                  <span className="text-gray-800 group-hover:text-black transition-colors duration-300">ENTERPRISES</span>
                 </motion.span>
               </button>
 
@@ -267,7 +267,7 @@ const Footer = () => {
                 className="text-sm font-medium text-gray-600 uppercase tracking-wider"
                 style={{ letterSpacing: '0.1em' }}
               >
-                GYMNACITY © {currentYear}
+                AAMIR ENTERPRISES © {currentYear}
               </motion.p>
             </motion.div>
 
@@ -302,7 +302,7 @@ const Footer = () => {
             <circle cx="100" cy="100" r="80" fill="none" stroke="currentColor" strokeWidth="2" />
             <circle cx="100" cy="100" r="60" fill="none" stroke="currentColor" strokeWidth="1" />
             <circle cx="100" cy="100" r="40" fill="none" stroke="currentColor" strokeWidth="1" />
-            <text x="100" y="105" textAnchor="middle" className="text-2xl font-black" fill="currentColor">GYM</text>
+            <text x="100" y="105" textAnchor="middle" className="text-2xl font-black" fill="currentColor">AE</text>
           </svg>
         </motion.div>
       </div>

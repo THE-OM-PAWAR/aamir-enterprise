@@ -25,10 +25,10 @@ export default function TempleSection() {
   }, []);
 
   const stats = [
-    { number: '500+', label: 'Members' },
-    { number: '50+', label: 'Classes Weekly' },
-    { number: '24/7', label: 'Access' },
-    { number: '10+', label: 'Years Experience' }
+    { number: '500+', label: 'Projects' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '15+', label: 'Years' },
+    { number: '100%', label: 'Satisfaction' }
   ];
 
   return (
@@ -41,8 +41,8 @@ export default function TempleSection() {
         transition={{ duration: 1.5, ease: [0.4, 0.0, 0.2, 1] }}
       >
         <img 
-          src="https://images.pexels.com/photos/1431282/pexels-photo-1431282.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-          alt="Gym interior"
+          src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          alt="Interior ceiling design"
           className="w-full h-full object-cover grayscale"
         />
         <motion.div 
@@ -79,7 +79,7 @@ export default function TempleSection() {
               animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              YOUR BODY IS
+              YOUR SPACE IS
             </motion.span>
             <motion.span 
               className="block"
@@ -87,7 +87,7 @@ export default function TempleSection() {
               animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              YOUR <span className="text-white/40">TEMPLE</span>
+              YOUR <span className="text-white/40">CANVAS</span>
             </motion.span>
           </motion.h2>
           
@@ -99,9 +99,9 @@ export default function TempleSection() {
             transition={{ duration: 0.8, delay: 1.0 }}
           >
             <p className="text-body text-lg md:text-xl text-white/70 leading-relaxed">
-              Our team of certified trainers is committed to helping you unlock your full potential. 
-              Through customized workout plans and constant support, we'll work with you to create 
-              a transformative experience that delivers real results.
+              Our team of skilled craftsmen is dedicated to bringing your vision to life.
+              Through custom designs and meticulous execution, we transform ordinary ceilings
+              into extraordinary architectural features that define your space.
             </p>
           </motion.div>
 
@@ -121,7 +121,7 @@ export default function TempleSection() {
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="relative z-10">Transform Today</span>
+                <span className="relative z-10">Get Free Quote</span>
                 <motion.div 
                   className="absolute inset-0 bg-red-600"
                   initial={{ x: '-100%' }}

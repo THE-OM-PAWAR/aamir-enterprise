@@ -16,7 +16,7 @@ export default function ContactPage() {
 
   const handleWhatsAppSend = () => {
     const whatsappNumber = '919753337771';
-    const message = `Hi! I'm interested in joining Gymnacity.\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
+    const message = `Hi! I'm interested in your false ceiling services.\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
@@ -51,12 +51,12 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@gymnacity.com']
+      details: ['info@aamirenterprises.com']
     },
     {
       icon: Clock,
       title: 'Hours',
-      details: ['Mon-Fri: 5AM - 11PM', 'Sat-Sun: 6AM - 10PM']
+      details: ['Mon-Sat: 9AM - 7PM', 'Sunday: By Appointment']
     }
   ];
 
@@ -80,7 +80,7 @@ export default function ContactPage() {
               CONTACT US
             </h1>
             <p className="text-body text-lg md:text-xl text-black/70 max-w-2xl mx-auto">
-              Ready to start your fitness journey? We're here to help you every step of the way.
+              Ready to transform your space? We're here to help you create the perfect ceiling design.
             </p>
           </motion.div>
         </div>
@@ -173,7 +173,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     rows={5}
                     className="w-full bg-transparent border-b border-white/20 pb-3 text-white placeholder-white/40 focus:border-white/60 focus:outline-none transition-colors duration-300 resize-none"
-                    placeholder="Tell us about your fitness goals..."
+                    placeholder="Tell us about your project requirements..."
                     required
                   />
                 </div>

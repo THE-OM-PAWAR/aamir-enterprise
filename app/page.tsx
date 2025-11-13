@@ -3,7 +3,7 @@
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import MissionSection from '@/components/MissionSection';
-import TrainingsSection from '@/components/TrainingsSection';
+import TrainingsSection from '@/components/services';
 import GallerySection from '@/components/GallerySection';
 import MembershipSection from '@/components/MembershipSection';
 import TempleSection from '@/components/TempleSection';
@@ -18,9 +18,9 @@ export default function Home() {
         <Header />
         <HeroSection />
         <MissionSection />
-        <TrainingsSection />
         <GallerySection />
-        <MembershipSection />
+        <TrainingsSection />
+        {/* <MembershipSection /> */}
         <TempleSection />
         <Footer />
       </main>

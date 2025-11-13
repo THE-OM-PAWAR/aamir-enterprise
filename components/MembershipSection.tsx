@@ -29,47 +29,47 @@ export default function MembershipSection() {
   const memberships = [
     {
       title: 'Basic',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for getting started',
+      price: 'Starting',
+      period: 'at ₹45/sq.ft',
+      description: 'Perfect for simple spaces',
       icon: Star,
       color: 'from-blue-500 to-cyan-500',
       features: [
-        'Access to gym equipment',
-        'Locker room access',
-        'Basic fitness consultation',
-        'Group fitness classes'
+        'Standard POP designs',
+        'Basic false ceiling',
+        'Standard lighting',
+        '1-year warranty'
       ]
     },
     {
       title: 'Premium',
-      price: '$59',
-      period: '/month',
+      price: 'Starting',
+      period: 'at ₹75/sq.ft',
       description: 'Most popular choice',
       icon: Zap,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-orange-500 to-amber-500',
       features: [
         'All Basic features',
-        'Personal training sessions',
-        'Nutrition planning',
-        'Priority booking',
-        'Sauna access'
+        'Designer POP patterns',
+        'Premium lighting fixtures',
+        'PVC panel options',
+        '2-year warranty'
       ],
       popular: true
     },
     {
       title: 'Elite',
-      price: '$99',
-      period: '/month',
-      description: 'Ultimate fitness experience',
+      price: 'Starting',
+      period: 'at ₹120/sq.ft',
+      description: 'Ultimate luxury experience',
       icon: Crown,
-      color: 'from-amber-500 to-orange-500',
+      color: 'from-red-500 to-orange-600',
       features: [
         'All Premium features',
-        'Unlimited personal training',
-        'Custom meal plans',
-        'Recovery therapy',
-        'VIP amenities'
+        'Custom 3D designs',
+        'Premium materials',
+        'Smart lighting systems',
+        '5-year warranty'
       ]
     }
   ];
@@ -95,7 +95,7 @@ export default function MembershipSection() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Choose Your Plan
+              Choose Your Package
             </motion.div>
             <motion.h2 
               className="text-display text-4xl md:text-5xl lg:text-6xl text-white mb-6"
@@ -104,7 +104,7 @@ export default function MembershipSection() {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              MEMBERSHIP
+              PACKAGES
             </motion.h2>
             <motion.p 
               className="text-body text-lg text-white/60 max-w-2xl mx-auto"
@@ -113,7 +113,7 @@ export default function MembershipSection() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              Choose the membership that fits your lifestyle and fitness goals
+              Select the package that best suits your space and design requirements
             </motion.p>
           </div>
 

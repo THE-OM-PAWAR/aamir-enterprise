@@ -15,26 +15,26 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center bg-white text-black overflow-hidden">
       {/* Main Content Container */}
-      <div className="w-full max-w-7xl mx-auto flex flex-col items-center pt-20 sm:pt-24 lg:pt-28 px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-7xl mx-auto flex flex-col items-center pt-20 sm:pt-24 lg:pt-28 px-4 mb-4 sm:px-6 lg:px-8">
         
         {/* Small Label with red accent */}
         <div className="text-[9px] sm:text-[10px] lg:text-sm font-semibold text-black/60 uppercase tracking-[0.2em] sm:tracking-[0.25em] lg:tracking-[0.3em] text-center mb-3 sm:mb-4 lg:mb-8 animate-fadeInUp flex items-center gap-2">
           <div className="w-1 h-1 bg-red-500 rounded-full"></div>
-          ACHIEVE YOUR FITNESS GOALS
+          DESIGNING CEILINGS THAT DEFINE SPACES
           <div className="w-1 h-1 bg-red-500 rounded-full"></div>
         </div>
         
         {/* Main Headlines - Improved mobile scaling */}
-        <h1 className="text-[3rem] leading-[0.8] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black tracking-tight text-center mb-12 sm:mb-6 lg:mb-12 animate-fadeInUp">
-          <span className="block">FIND YOUR</span>
-          <span className="block">STRENGTH</span>
+        <h1 className="text-[3rem] leading-[0.8] sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black tracking-tight text-center mb-12 sm:mb-6 lg:mb-12 animate-fadeInUp">
+          <span className="block">ELEVATE YOUR</span>
+          <span className="block">INTERIORS</span>
         </h1>
         {/* Image Container - Enhanced mobile responsiveness */}
         <div className="relative w-full max-w-6xl mx-auto">
           <div className="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden aspect-[3/4] sm:aspect-[4/3] md:aspect-[16/10] lg:aspect-[2.2/1] shadow-lg sm:shadow-xl lg:shadow-2xl animate-fadeInUp">
             <img 
-              src="https://images.unsplash.com/photo-1603665409265-bdc00027c217?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Fitness Training"
+              src="https://images.pexels.com/photos/6585759/pexels-photo-6585759.jpeg?auto=compress&cs=tinysrgb&w=1920"
+              alt="Modern False Ceiling Design"
               className="w-full h-full object-cover object-center"
             />
             
@@ -44,8 +44,8 @@ export default function HeroSection() {
             {/* Text Overlay - Better mobile scaling */}
             <div className="absolute inset-0 flex items-center justify-center px-3 sm:px-4 lg:px-6">
               <h2 className="text-[3rem] leading-[0.8] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black tracking-tight text-white text-center">
-                <span className="block drop-shadow-2xl text-shadow-lg">INSIDE</span>
-                <span className="block drop-shadow-2xl text-shadow-lg">AND OUT.</span>
+                <span className="block drop-shadow-2xl text-shadow-lg">CEILINGS THAT</span>
+                <span className="block drop-shadow-2xl text-shadow-lg">INSPIRE.</span>
               </h2>
             </div>
             
@@ -56,7 +56,7 @@ export default function HeroSection() {
                 <button
                   onClick={() => {
                     const whatsappNumber = '919753337771';
-                    const message = "Hi! I'm interested in joining Gymnacity. Can you provide more information?";
+                    const message = "Hi! I'm interested in your false ceiling services. Can you provide more information?";
                     const encodedMessage = encodeURIComponent(message);
                     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
                     window.open(whatsappUrl, '_blank');
@@ -79,7 +79,7 @@ export default function HeroSection() {
                 >
                   <MapPin size={12} className="sm:w-3 sm:h-3 lg:w-4 lg:h-4 text-white/80" />
                   <span className="text-white text-[10px] sm:text-xs lg:text-sm font-medium underline">
-                    Hardamlala Chowk, AB Rd, Rau, Indore, Madhya Pradesh 453331
+                    Hardamlala Chowk
                   </span>
                 </a>
               </div>
@@ -92,7 +92,7 @@ export default function HeroSection() {
                 {/* Left: Description & Play Button */}
                 <div className="flex items-center gap-2 sm:gap-3 lg:gap-6 flex-1">
                   <div className="text-white text-[10px] sm:text-xs lg:text-base font-light max-w-[140px] sm:max-w-[200px] lg:max-w-xs leading-relaxed drop-shadow-md">
-                    We are dedicated to helping you achieve your fitness goals and improve your overall health and well-being.
+                    We specialize in creating stunning false ceilings, POP designs, PVC panels, and decorative lighting solutions that transform spaces.
                   </div>
                   <button className="group w-9 h-9 sm:w-10 sm:h-10 lg:w-14 lg:h-14 bg-red-500/80 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-red-500 hover:scale-110 transition-all duration-300 border border-red-400/50 shadow-lg flex-shrink-0">
                     <ArrowRight size={14} className="sm:w-4 sm:h-4 lg:w-6 lg:h-6 text-white group-hover:translate-x-1 transition-transform duration-300" />
