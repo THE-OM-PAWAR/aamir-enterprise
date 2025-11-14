@@ -37,7 +37,7 @@ export default function TrainingsSection() {
       title: 'Printed Ceiling',
       subtitle: 'Designs',
       description: 'Eye-catching 3D ceiling work that adds depth and modern aesthetics to any space.',
-      image: '/3D Ceiling.jpeg'
+      image: '/3D ceiling.jpeg'
     },
     {
       number: '03',
@@ -65,7 +65,7 @@ export default function TrainingsSection() {
       title: 'Wall Design & Painting',
       subtitle: 'Decor Panels',
       description: 'Innovative wall designing and painting including 3D sheets and decorative textures.',
-      image: '/wall design.jpeg'
+      image: '/Wall design.jpeg'
     }
   ];
 
