@@ -30,42 +30,42 @@ export default function TrainingsSection() {
       title: 'PVC Ceiling',
       subtitle: 'Solutions',
       description: 'Durable and stylish PVC ceilings for homes, offices, and showrooms.',
-      image: 'https://images.pexels.com/photos/6585759/pexels-photo-6585759.jpeg?auto=compress&cs=tinysrgb&w=1920'
+      image: '/pvc ceiling.jpg'
     },
     {
       number: '02',
-      title: '3D Ceiling',
+      title: 'Printed Ceiling',
       subtitle: 'Designs',
       description: 'Eye-catching 3D ceiling work that adds depth and modern aesthetics to any space.',
-      image: 'https://images.pexels.com/photos/6585759/pexels-photo-6585759.jpeg?auto=compress&cs=tinysrgb&w=1920'
+      image: '/3D Ceiling.jpeg'
     },
     {
       number: '03',
       title: 'UV Marble Sheets',
       subtitle: 'Installation',
       description: 'Elegant UV marble sheets for walls and ceilings with a glossy, premium finish.',
-      image: 'https://images.pexels.com/photos/6585759/pexels-photo-6585759.jpeg?auto=compress&cs=tinysrgb&w=1920'
+      image: '/uv marble.avif'
     },
     {
       number: '04',
       title: '2x2 Designer',
       subtitle: 'Panels',
       description: 'Modular 2x2 ceiling panels available in various patterns and finishes.',
-      image: 'https://images.pexels.com/photos/6585759/pexels-photo-6585759.jpeg?auto=compress&cs=tinysrgb&w=1920'
+      image: '/ceiling 2x2.jpg'
     },
     {
       number: '05',
       title: 'POP & Gypsum',
       subtitle: 'Ceiling Work',
       description: 'Smooth, customizable POP and gypsum designs for luxury interiors.',
-      image: 'https://images.pexels.com/photos/6585759/pexels-photo-6585759.jpeg?auto=compress&cs=tinysrgb&w=1920'
+      image: '/pop ceiling.jpeg'
     },
     {
       number: '06',
-      title: 'Wall & Ceiling',
+      title: 'Wall Design & Painting',
       subtitle: 'Decor Panels',
-      description: 'Innovative wall and ceiling coverings including 3D sheets and decorative textures.',
-      image: 'https://images.pexels.com/photos/6585759/pexels-photo-6585759.jpeg?auto=compress&cs=tinysrgb&w=1920'
+      description: 'Innovative wall designing and painting including 3D sheets and decorative textures.',
+      image: '/wall design.jpeg'
     }
   ];
 

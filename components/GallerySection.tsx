@@ -41,15 +41,15 @@ export default function GallerySection() {
       id: 11,
       category: 'facilities',
       type: 'image',
-      src: '/Screenshot 2025-06-16 220645.png',
-      title: 'Corner Gym Art',
+      src: '/gallery01.jpeg',
+      title: '3D Fall Ceiling',
       description: 'Corner view with graffiti and gym equipment.'
     },
     {
       id: 12,
       category: 'facilities',
       type: 'image',
-      src: '/Screenshot 2025-06-16 220615.png',
+      src: '/gallery2.jpeg',
       title: 'Spacious Gym Floor',
       description: 'Open gym floor with equipment and stairs.'
     },
@@ -57,7 +57,7 @@ export default function GallerySection() {
       id: 13,
       category: 'facilities',
       type: 'image',
-      src: '/Screenshot 2025-06-16 220544.png',
+      src: '/gallery3.jpeg',
       title: 'Wooden Floor Studio',
       description: 'Studio area with wooden flooring and mirrors.'
     },
@@ -65,7 +65,7 @@ export default function GallerySection() {
       id: 14,
       category: 'facilities',
       type: 'image',
-      src: '/Screenshot 2025-06-16 220523.png',
+      src: '/gallery4.jpeg',
       title: 'Strength Training Zone',
       description: 'Strength training area with benches and weights.'
     },
@@ -73,7 +73,7 @@ export default function GallerySection() {
       id: 15,
       category: 'facilities',
       type: 'image',
-      src: '/Screenshot 2025-06-16 220504.png',
+      src: '/gallery5.jpeg',
       title: 'Gym Floor and Stairs',
       description: 'View of gym floor and staircase.'
     },
@@ -81,7 +81,7 @@ export default function GallerySection() {
       id: 16,
       category: 'facilities',
       type: 'image',
-      src: '/Screenshot 2025-06-16 220440.png',
+      src: '/gallery6.jpeg',
       title: 'Busy Gym Session',
       description: 'Multiple people working out in the gym.'
     },
@@ -89,7 +89,7 @@ export default function GallerySection() {
       id: 17,
       category: 'facilities',
       type: 'image',
-      src: '/Screenshot 2025-06-16 220405.png',
+      src: '/gallery7.jpeg',
       title: 'Studio and Monkey Bars',
       description: 'Studio with monkey bars and lighting.'
     },
@@ -97,7 +97,7 @@ export default function GallerySection() {
       id: 18,
       category: 'facilities',
       type: 'image',
-      src: '/Screenshot 2025-06-16 220351.png',
+      src: '/gallery8.jpeg',
       title: 'Dumbbell Rack',
       description: 'Dumbbell rack and benches in the gym.'
     },
@@ -105,14 +105,14 @@ export default function GallerySection() {
       id: 19,
       category: 'facilities',
       type: 'image',
-      src: '/Screenshot 2025-06-16 220305.png',
+      src: '/gallery9.jpeg',
       title: 'Gym Exterior',
       description: 'Night view of the gym building.'
     }, {
       id: 9,
       category: 'facilities',
       type: 'image',
-      src: '/Screenshot 2025-06-16 220757.png',
+      src: '/gallery10.jpeg',
       title: 'Cardio and Treadmills',
       description: 'Modern treadmills with a city view.'
     },
@@ -120,7 +120,7 @@ export default function GallerySection() {
       id: 10,
       category: 'facilities',
       type: 'image',
-      src: '/Screenshot 2025-06-16 220746.png',
+      src: '/gallery11.jpeg',
       title: 'Artistic Wall and Leg Press',
       description: 'Leg press machine with vibrant wall art.'
     },
