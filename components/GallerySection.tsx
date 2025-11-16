@@ -42,87 +42,87 @@ export default function GallerySection() {
       category: 'facilities',
       type: 'image',
       src: '/gallery01.jpeg',
-      title: '3D Fall Ceiling',
-      description: 'Corner view with graffiti and gym equipment.'
+      title: 'PVC Fall Ceiling',
+      description: 'A layered PVC ceiling with warm wooden accents and LED strip lighting..'
     },
     {
       id: 12,
       category: 'facilities',
       type: 'image',
       src: '/gallery2.jpeg',
-      title: 'Spacious Gym Floor',
-      description: 'Open gym floor with equipment and stairs.'
+      title: 'Minimal Geometric Ceiling',
+      description: 'A clean white ceiling featuring sharp black geometric border lines.'
     },
     {
       id: 13,
       category: 'facilities',
       type: 'image',
       src: '/gallery3.jpeg',
-      title: 'Wooden Floor Studio',
-      description: 'Studio area with wooden flooring and mirrors.'
+      title: 'Wooden Panel Ceiling',
+      description: 'A stylish ceiling with wooden panels and artistic CNC lighting patterns.'
     },
     {
       id: 14,
       category: 'facilities',
       type: 'image',
       src: '/gallery4.jpeg',
-      title: 'Strength Training Zone',
-      description: 'Strength training area with benches and weights.'
+      title: 'Soft Glow Box Ceiling',
+      description: 'A modern ceiling with soft recessed lighting and elegant box-shaped patterns.'
     },
     {
       id: 15,
       category: 'facilities',
       type: 'image',
       src: '/gallery5.jpeg',
-      title: 'Gym Floor and Stairs',
-      description: 'View of gym floor and staircase.'
+      title: 'Designer panels Ceiling',
+      description: 'A bold ceiling design with layered geometric shapes illuminated by blue LED lighting..'
     },
     {
       id: 16,
       category: 'facilities',
       type: 'image',
       src: '/gallery6.jpeg',
-      title: 'Busy Gym Session',
-      description: 'Multiple people working out in the gym.'
+      title: 'louvers wall design',
+      description: 'A minimal ceiling with warm vertical LED strips enhancing the modern bedroom backdrop.'
     },
     {
       id: 17,
       category: 'facilities',
       type: 'image',
       src: '/gallery7.jpeg',
-      title: 'Studio and Monkey Bars',
-      description: 'Studio with monkey bars and lighting.'
+      title: 'Linear strip ceiling',
+      description: 'A sleek false ceiling featuring artistic linear LED patterns for a premium living room look.'
     },
     {
       id: 18,
       category: 'facilities',
       type: 'image',
       src: '/gallery8.jpeg',
-      title: 'Dumbbell Rack',
-      description: 'Dumbbell rack and benches in the gym.'
+      title: 'Wooden Layered Ceiling',
+      description: 'A warm ceiling design with layered wooden panels and soft indirect lighting.'
     },
     {
       id: 19,
       category: 'facilities',
       type: 'image',
       src: '/gallery9.jpeg',
-      title: 'Gym Exterior',
-      description: 'Night view of the gym building.'
+      title: 'Royal Floral Ceiling',
+      description: 'A luxurious ceiling with ornate floral patterns and a grand chandelier centerpiece.'
     }, {
       id: 9,
       category: 'facilities',
       type: 'image',
       src: '/gallery10.jpeg',
-      title: 'Cardio and Treadmills',
-      description: 'Modern treadmills with a city view.'
+      title: 'Golden Panel Ceiling',
+      description: 'A modern ceiling with golden panel designs and a modern chandelier centerpiece.'
     },
     {
       id: 10,
       category: 'facilities',
       type: 'image',
       src: '/gallery11.jpeg',
-      title: 'Artistic Wall and Leg Press',
-      description: 'Leg press machine with vibrant wall art.'
+      title: '3D Wall Design',
+      description: 'A 3D wall design with a modern look and feel.'
     },
   ];
 
