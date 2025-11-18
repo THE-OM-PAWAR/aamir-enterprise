@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Home } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,17 +36,21 @@ export default function Header() {
           : 'bg-transparent backdrop-blur-sm'
       }`}
     >
-      <nav className="container-custom py-3">
+      <nav className="container-custom py-2">
         <div className="flex items-center justify-between">
-          {/* Logo with red accent and home functionality */}
+          {/* Logo with home functionality */}
           <button
             onClick={scrollToTop}
-            className={`text-lg font-black tracking-tight transition-colors duration-300 flex items-center gap-1.5 hover:scale-105 ${
-              isScrolled ? 'text-white' : 'text-black'
-            }`}
+            className="transition-transform duration-300 hover:scale-105"
           >
-            <div className="w-1.5 h-1.5 bg-red-500 rounded-full"></div>
-            AAMIR ENTERPRISES
+            <Image
+              src={isScrolled ? "/logo-white.svg" : "/logo.svg"}
+              alt="AAMIR ENTERPRISES"
+              width={150}
+              height={86}
+              className="h-12 w-auto transition-opacity duration-300"
+              priority
+            />
           </button>
 
           {/* Desktop Navigation */}
