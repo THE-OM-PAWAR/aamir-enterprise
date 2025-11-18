@@ -20,7 +20,6 @@ export default function Header() {
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/#trainings' },
     { name: 'Gallery', href: '/#gallery' },
-    { name: 'Packages', href: '/#membership' },
     { name: 'Contact', href: '/contact' }
   ];
 

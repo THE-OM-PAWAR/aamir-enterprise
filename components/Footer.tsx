@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Lightbulb, Instagram, Linkedin, Globe, Mail, Home, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -107,7 +108,6 @@ const Footer = () => {
                   { href: '/', label: 'HOME', isLink : true},
                   { href: '/#trainings', label: 'SERVICES' },
                   { href: '/#gallery', label: 'GALLERY' },
-                  { href: '/#membership', label: 'PACKAGES' },
                   { href: '/contact', label: 'CONTACT', isLink: true },
                 ].map((link, index) => (
                   <motion.div
@@ -230,42 +230,32 @@ const Footer = () => {
       {/* Bottom Section */}
       <div className="border-t border-gray-300">
         <div className="container-custom py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-4">
             {/* Logo & Copyright */}
             <motion.div 
-              className="flex items-center gap-6"
+              className="flex flex-col md:flex-row items-center gap-4 md:gap-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <button onClick={scrollToTop} className="flex items-center gap-2 group">
-                <motion.div 
-                  className="relative"
-                  whileHover={{ scale: 1.1, rotate: 10 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center group-hover:bg-red-500 transition-colors duration-300">
-                    <Lightbulb className="h-6 w-6 text-white transition-colors duration-300" />
-                  </div>
-                </motion.div>
-                
-                <motion.span 
-                  className="text-2xl font-black tracking-tight"
-                  style={{
-                    fontFamily: 'var(--font-grotesk), Impact, Arial Black, sans-serif',
-                    letterSpacing: '0.02em',
-                  }}
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <span className="text-black group-hover:text-red-500 transition-colors duration-300">AAMIR</span>
-                  <span className="text-gray-800 group-hover:text-black transition-colors duration-300">ENTERPRISES</span>
-                </motion.span>
-              </button>
+              <motion.button 
+                onClick={scrollToTop} 
+                className="group"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Image
+                  src="/logo.svg"
+                  alt="AAMIR ENTERPRISES"
+                  width={200}
+                  height={96}
+                  className="h-10 w-auto transition-opacity duration-300 group-hover:opacity-80"
+                />
+              </motion.button>
 
               <motion.p 
-                className="text-sm font-medium text-gray-600 uppercase tracking-wider"
+                className="text-xs font-medium text-gray-600 uppercase tracking-wider text-center md:text-left"
                 style={{ letterSpacing: '0.1em' }}
               >
                 AAMIR ENTERPRISES © {currentYear}
@@ -274,7 +264,7 @@ const Footer = () => {
 
             {/* Credits */}
             <motion.div
-              className="text-right"
+              className="text-center md:text-right"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -282,7 +272,7 @@ const Footer = () => {
             >
               <Link 
                 href="#"
-                className="text-sm font-medium text-gray-500 hover:text-red-500 transition-colors duration-300 uppercase tracking-wider"
+                className="text-xs font-medium text-gray-500 hover:text-red-500 transition-colors duration-300 uppercase tracking-wider"
                 style={{ letterSpacing: '0.1em' }}
               >
                 INFOS & CREDITS
