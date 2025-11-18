@@ -103,13 +103,14 @@ export default function MissionSection() {
             animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
           >
-            <motion.button 
-              className="bg-red-500 text-white px-6 py-3 font-medium text-sm tracking-wider uppercase"
+            <motion.a
+              href="/contact"
+              className="bg-red-500 text-white px-6 py-3 font-medium text-sm tracking-wider uppercase inline-block"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
               Start Your Project
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           {/* Compact stats */}

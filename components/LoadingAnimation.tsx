@@ -11,7 +11,7 @@ export default function LoadingAnimation() {
     // Set loading to false after animation completes
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3500); // Total animation duration
+    }, 1800); // Reduced animation duration to 1.8 seconds
 
     return () => clearTimeout(timer);
   }, []);
@@ -44,7 +44,7 @@ export default function LoadingAnimation() {
                 rotate: [0, 360, 360]
               }}
               transition={{ 
-                duration: 2.5,
+                duration: 1.2,
                 times: [0, 0.6, 1],
                 ease: [0.4, 0.0, 0.2, 1]
               }}
@@ -74,7 +74,7 @@ export default function LoadingAnimation() {
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 1.5, ease: [0.4, 0.0, 0.2, 1] }}
+              transition={{ duration: 0.5, delay: 0.7, ease: [0.4, 0.0, 0.2, 1] }}
             >
               <motion.h1 
                 className="text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-none tracking-tight text-white"
@@ -87,7 +87,7 @@ export default function LoadingAnimation() {
                   className="inline-block"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 1.8 }}
+                  transition={{ duration: 0.3, delay: 0.9 }}
                 >
                   AAMIR
                 </motion.span>
@@ -95,7 +95,7 @@ export default function LoadingAnimation() {
                   className="inline-block text-red-500"
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 2.0 }}
+                  transition={{ duration: 0.3, delay: 1.0 }}
                 >
                   ENTERPRISES
                 </motion.span>
@@ -106,7 +106,7 @@ export default function LoadingAnimation() {
                 className="text-white/60 text-lg font-light mt-4 tracking-wider uppercase"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 2.2 }}
+                transition={{ duration: 0.4, delay: 1.1 }}
               >
                 Designing Ceilings that Define Spaces
               </motion.p>
@@ -117,7 +117,7 @@ export default function LoadingAnimation() {
               className="flex gap-2 mt-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 2.5 }}
+              transition={{ duration: 0.3, delay: 1.3 }}
             >
               {[0, 1, 2].map((index) => (
                 <motion.div
@@ -128,9 +128,9 @@ export default function LoadingAnimation() {
                     opacity: [0.5, 1, 0.5]
                   }}
                   transition={{
-                    duration: 1,
+                    duration: 0.5,
                     repeat: Infinity,
-                    delay: index * 0.2,
+                    delay: index * 0.1,
                     ease: "easeInOut"
                   }}
                 />
@@ -143,7 +143,7 @@ export default function LoadingAnimation() {
             className="absolute inset-0 bg-gradient-radial from-transparent via-black/20 to-black/60"
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 2, delay: 0.5 }}
+            transition={{ duration: 1, delay: 0.3 }}
           />
 
           {/* Corner Accents */}
@@ -151,25 +151,25 @@ export default function LoadingAnimation() {
             className="absolute top-8 left-8 w-12 h-12 border-l-2 border-t-2 border-red-500/30"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 2.8 }}
+            transition={{ duration: 0.4, delay: 1.4 }}
           />
           <motion.div
             className="absolute top-8 right-8 w-12 h-12 border-r-2 border-t-2 border-red-500/30"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 2.8 }}
+            transition={{ duration: 0.4, delay: 1.4 }}
           />
           <motion.div
             className="absolute bottom-8 left-8 w-12 h-12 border-l-2 border-b-2 border-red-500/30"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 2.8 }}
+            transition={{ duration: 0.4, delay: 1.4 }}
           />
           <motion.div
             className="absolute bottom-8 right-8 w-12 h-12 border-r-2 border-b-2 border-red-500/30"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 2.8 }}
+            transition={{ duration: 0.4, delay: 1.4 }}
           />
         </motion.div>
       )}

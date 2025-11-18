@@ -104,9 +104,12 @@ export default function HeroSection() {
                   <div className="text-white text-[10px] sm:text-xs lg:text-base font-light max-w-[140px] sm:max-w-[200px] lg:max-w-xs leading-relaxed drop-shadow-md">
                     We specialize in creating stunning false ceilings, POP designs, PVC panels, and decorative lighting solutions that transform spaces.
                   </div>
-                  <button className="group w-9 h-9 sm:w-10 sm:h-10 lg:w-14 lg:h-14 bg-red-500/80 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-red-500 hover:scale-110 transition-all duration-300 border border-red-400/50 shadow-lg flex-shrink-0">
+                  <a
+                    href="#gallery"
+                    className="group w-9 h-9 sm:w-10 sm:h-10 lg:w-14 lg:h-14 bg-red-500/80 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-red-500 hover:scale-110 transition-all duration-300 border border-red-400/50 shadow-lg flex-shrink-0"
+                  >
                     <ArrowRight size={14} className="sm:w-4 sm:h-4 lg:w-6 lg:h-6 text-white group-hover:translate-x-1 transition-transform duration-300" />
-                  </button>
+                  </a>
                 </div>
                 
                 {/* Right: Time */}

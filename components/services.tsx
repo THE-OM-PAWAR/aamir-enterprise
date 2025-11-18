@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-export default function TrainingsSection() {
+export default function ServicesSection() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -71,7 +71,7 @@ export default function TrainingsSection() {
 
 
   return (
-    <section ref={sectionRef} className="py-12 md:py-16 bg-black relative overflow-hidden" id="trainings">
+    <section ref={sectionRef} className="py-12 md:py-16 bg-black relative overflow-hidden" id="services">
       <div className="container-custom">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
