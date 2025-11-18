@@ -57,7 +57,7 @@ export default function ServicesSection() {
       number: '05',
       title: 'POP & Gypsum',
       subtitle: 'Ceiling Work',
-      description: 'Smooth, customizable POP and gypsum designs for luxury interiors.',
+      description: 'Best POP ceiling and gypsum ceiling work in Bhopal, Madhya Pradesh. Expert POP contractor for homes and buildings with smooth, customizable designs for luxury interiors.',
       image: '/pop ceiling.jpeg'
     },
     {
@@ -87,7 +87,7 @@ export default function ServicesSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="w-8 h-px bg-red-500"></div>
-              <span className="text-caption text-white/40 text-xs uppercase tracking-wider">Our Services</span>
+              <span className="text-caption text-white/40 text-xs uppercase tracking-wider">POP Ceiling & False Ceiling Services in Bhopal</span>
             </motion.div>
             
             <motion.div
@@ -223,7 +223,7 @@ export default function ServicesSection() {
                       >
                         <img
                           src={service.image}
-                          alt={service.title}
+                          alt={`${service.title} ${service.subtitle} by Aamir Enterprises S - POP Ceiling & False Ceiling Contractor in Bhopal, Madhya Pradesh`}
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                         {/* Subtle gradient overlay */}

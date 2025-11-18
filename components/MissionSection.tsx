@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function MissionSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -93,9 +94,55 @@ export default function MissionSection() {
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            From residential to commercial projects,
-            we create ceiling solutions that enhance aesthetics and functionality.
+            Best POP ceiling and false ceiling contractor in Bhopal, Madhya Pradesh. From residential homes to commercial buildings, we specialize in POP work and false ceiling installation that enhances aesthetics and functionality.
           </motion.p>
+
+          {/* Minimal founder mention */}
+          <motion.div
+            className="inline-flex items-center mb-10"
+            initial={{ opacity: 0 }}
+            animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.6, delay: 0.65 }}
+          >
+            <motion.div 
+              className="relative"
+              initial={{ scale: 0.8 }}
+              animate={isVisible ? { scale: 1 } : { scale: 0.8 }}
+              transition={{ duration: 0.5, delay: 0.7, type: "spring", stiffness: 200 }}
+            >
+              <div className="w-10 h-10 rounded-full overflow-hidden shadow-lg">
+                <Image 
+                  src="/gallery4.jpeg"
+                  alt="Aamir Khan"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <motion.div 
+                className="absolute -bottom-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-black"
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              />
+            </motion.div>
+            
+            <div className="h-px w-6 bg-white/10 mx-2"></div>
+            
+            <motion.a
+              href="/about"
+              className="text-xs uppercase tracking-wider text-white/50 hover:text-red-500 transition-colors duration-300 flex items-center gap-1 group"
+              whileHover={{ x: 3 }}
+              transition={{ duration: 0.2 }}
+            >
+              <span>By Aamir Khan</span>
+              <motion.span
+                initial={{ opacity: 0, x: -5 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 1, duration: 0.5 }}
+                className="transform group-hover:translate-x-1 transition-transform duration-300"
+              >→</motion.span>
+            </motion.a>
+          </motion.div>
 
           {/* Minimal CTA */}
           <motion.div

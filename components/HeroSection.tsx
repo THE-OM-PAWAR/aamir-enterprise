@@ -8,7 +8,7 @@ export default function HeroSection() {
     const message = 'Hi! I\'m interested in joining Aamir Enterprises . Can you provide more information?';
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-    
+
     window.open(whatsappUrl, '_blank');
   };
 
@@ -16,14 +16,14 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex flex-col items-center justify-center bg-white text-black overflow-hidden">
       {/* Main Content Container */}
       <div className="w-full max-w-7xl mx-auto flex flex-col items-center pt-20 sm:pt-24 lg:pt-28 px-4 mb-4 sm:px-6 lg:px-8">
-        
+
         {/* Small Label with red accent */}
         <div className="text-[9px] sm:text-[10px] lg:text-sm font-semibold text-black/60 uppercase tracking-[0.2em] sm:tracking-[0.25em] lg:tracking-[0.3em] text-center mb-3 sm:mb-4 lg:mb-8 animate-fadeInUp flex items-center gap-2">
           <div className="w-1 h-1 bg-red-500 rounded-full"></div>
-          DESIGNING CEILINGS THAT DEFINE SPACES
+          POP CEILING & FALSE CEILING CONTRACTOR IN BHOPAL, MADHYA PRADESH
           <div className="w-1 h-1 bg-red-500 rounded-full"></div>
         </div>
-        
+
         {/* Main Headlines - Improved mobile scaling */}
         <h1 className="text-[3rem] leading-[0.8] sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black tracking-tight text-center mb-12 sm:mb-6 lg:mb-12 animate-fadeInUp">
           <span className="block">ELEVATE YOUR</span>
@@ -34,7 +34,7 @@ export default function HeroSection() {
           <div className="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden aspect-[3/4] sm:aspect-[4/3] md:aspect-[16/10] lg:aspect-[2.2/1] shadow-lg sm:shadow-xl lg:shadow-2xl animate-fadeInUp">
             <img
               src="https://images.pexels.com/photos/6585759/pexels-photo-6585759.jpeg?auto=compress&cs=tinysrgb&w=1920"
-              alt="Modern False Ceiling Design"
+              alt="POP Ceiling and False Ceiling Design by Aamir Enterprises S in Bhopal, Madhya Pradesh"
               className="w-full h-full object-cover object-center hidden sm:block"
             />
 
@@ -47,10 +47,10 @@ export default function HeroSection() {
               <source src="/video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            
+
             {/* Enhanced gradient overlay for better text readability */}
             <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/60"></div>
-            
+
             {/* Text Overlay - Better mobile scaling */}
             <div className="absolute inset-0 flex items-center justify-center px-2 sm:px-3 lg:px-4">
               <h2 className="text-2xl leading-[0.95] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black tracking-tight text-white text-center">
@@ -58,15 +58,15 @@ export default function HeroSection() {
                 <span className="block drop-shadow-2xl text-shadow-lg">INSPIRE.</span>
               </h2>
             </div>
-            
+
             {/* Top Buttons - Responsive for mobile */}
             <div className="absolute top-3 left-3 right-3 flex flex-col sm:block gap-2 z-10">
               <div className="flex sm:block justify-between">
                 {/* Top Left - WhatsApp Button */}
                 <button
                   onClick={() => {
-                    const whatsappNumber = '919753337771';
-                    const message = "Hi! I'm interested in your false ceiling services. Can you provide more information?";
+                    const whatsappNumber = '919399857669';
+                    const message = "Hi! I'm interested in POP ceiling and false ceiling work in Bhopal. Can you provide more information?";
                     const encodedMessage = encodeURIComponent(message);
                     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
                     window.open(whatsappUrl, '_blank');
@@ -81,7 +81,7 @@ export default function HeroSection() {
                 </button>
                 {/* Top Right - Location */}
                 <a
-                  href="https://maps.app.goo.gl/66UsYoJdUnmzBKhr7"
+                  href="https://maps.app.goo.gl/3BHeBYhy9LguMZPF9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-black/30 backdrop-blur-md px-3 py-2 rounded-full border border-white/20 hover:bg-red-500/20 transition-colors duration-200 ml-0 sm:ml-auto"
@@ -89,20 +89,20 @@ export default function HeroSection() {
                 >
                   <MapPin size={12} className="sm:w-3 sm:h-3 lg:w-4 lg:h-4 text-white/80" />
                   <span className="text-white text-[10px] sm:text-xs lg:text-sm font-medium underline">
-                    Hardamlala Chowk
+                    Ashoka Garden
                   </span>
                 </a>
               </div>
             </div>
-            
+
             {/* Bottom Content - Enhanced mobile layout */}
             <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 lg:p-6">
               <div className="flex items-end justify-between gap-2 sm:gap-3 lg:gap-4">
-                
+
                 {/* Left: Description & Play Button */}
                 <div className="flex items-center gap-2 sm:gap-3 lg:gap-6 flex-1">
                   <div className="text-white text-[10px] sm:text-xs lg:text-base font-light max-w-[140px] sm:max-w-[200px] lg:max-w-xs leading-relaxed drop-shadow-md">
-                    We specialize in creating stunning false ceilings, POP designs, PVC panels, and decorative lighting solutions that transform spaces.
+                    Best POP ceiling and false ceiling contractor in Bhopal, Madhya Pradesh. Expert POP work, false ceiling installation, gypsum ceiling for homes and buildings.
                   </div>
                   <a
                     href="#gallery"
@@ -111,22 +111,18 @@ export default function HeroSection() {
                     <ArrowRight size={14} className="sm:w-4 sm:h-4 lg:w-6 lg:h-6 text-white group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
                 </div>
-                
-                {/* Right: Time */}
-                <div className="text-white text-[10px] sm:text-xs lg:text-base font-medium bg-black/30 backdrop-blur-sm px-2 py-1 sm:px-2.5 sm:py-1 lg:px-3 lg:py-1.5 rounded-full border border-white/25 shadow-lg flex-shrink-0">
-                  3 min
-                </div>
+
               </div>
             </div>
           </div>
-          
+
           {/* Enhanced decorative elements with red accents */}
           <div className="absolute -top-1.5 -right-1.5 sm:-top-2 sm:-right-2 lg:-top-4 lg:-right-4 w-4 h-4 sm:w-6 sm:h-6 lg:w-12 lg:h-12 border-2 border-red-500/30 rounded-full animate-pulse"></div>
           <div className="absolute -bottom-1.5 -left-1.5 sm:-bottom-2 sm:-left-2 lg:-bottom-4 lg:-left-4 w-3 h-3 sm:w-4 sm:h-4 lg:w-8 lg:h-8 bg-red-500/20 rounded-full"></div>
           <div className="absolute top-1/2 -left-0.5 sm:-left-1 lg:-left-2 w-1.5 h-1.5 sm:w-2 sm:h-2 lg:w-3 lg:h-3 bg-red-500/30 rounded-full"></div>
         </div>
       </div>
-      
+
       {/* Enhanced scroll indicator - Better mobile visibility */}
       <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-1 sm:gap-2 text-black/50 animate-bounce">
         <div className="w-px h-4 sm:h-6 lg:h-8 bg-gradient-to-b from-red-500/50 to-transparent"></div>

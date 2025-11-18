@@ -42,7 +42,7 @@ export default function TempleSection() {
       >
         <img 
           src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920"
-          alt="Interior ceiling design"
+          alt="POP Ceiling and False Ceiling Design by Aamir Enterprises S in Bhopal, Madhya Pradesh"
           className="w-full h-full object-cover grayscale"
         />
         <motion.div 
@@ -99,9 +99,7 @@ export default function TempleSection() {
             transition={{ duration: 0.8, delay: 1.0 }}
           >
             <p className="text-body text-lg md:text-xl text-white/70 leading-relaxed">
-              Our team of skilled craftsmen is dedicated to bringing your vision to life.
-              Through custom designs and meticulous execution, we transform ordinary ceilings
-              into extraordinary architectural features that define your space.
+              Best POP ceiling and false ceiling contractor in Bhopal, Madhya Pradesh. Our team of skilled craftsmen is dedicated to bringing your vision to life. Through expert POP work and false ceiling installation, we transform ordinary ceilings into extraordinary architectural features for homes and buildings across Bhopal and Madhya Pradesh.
             </p>
           </motion.div>
 

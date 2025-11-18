@@ -31,6 +31,7 @@ export default function Header() {
 
   const navItems = [
     { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
     { name: 'Gallery', href: '/#gallery' },
     { name: 'Services', href: '/#services' },
     { name: 'Contact', href: '/contact' }
@@ -58,7 +59,7 @@ export default function Header() {
             >
               <Image
                 src={isScrolled ? "/logo-white.svg" : "/logo.svg"}
-                alt="Aamir Enterprises S"
+                alt="Aamir Enterprises S - POP Ceiling & False Ceiling Contractor in Bhopal, Madhya Pradesh"
                 width={150}
                 height={86}
                 className="h-12 w-auto transition-opacity duration-300"

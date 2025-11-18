@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Lightbulb, Instagram, Linkedin, Globe, Mail, Home, Phone } from 'lucide-react';
+import { Lightbulb, Instagram, Linkedin, Globe, Mail, Home, Phone, Youtube } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="container-custom py-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left Side - Bold Statement */}
-          <motion.div 
+          <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -26,7 +26,7 @@ const Footer = () => {
             viewport={{ once: true }}
           >
             <div>
-              <motion.h2 
+              <motion.h2
                 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase leading-tight tracking-tight mb-6"
                 style={{
                   fontFamily: 'var(--font-grotesk), Impact, Arial Black, sans-serif',
@@ -41,16 +41,15 @@ const Footer = () => {
                 READY TO TRANSFORM YOUR SPACE?<br />
                 <span className="text-gray-800">LET'S CREATE MAGIC!</span>
               </motion.h2>
-              
-              <motion.p 
+
+              <motion.p
                 className="text-gray-600 text-lg max-w-md"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                Experience premium ceiling solutions with Aamir Enterprises s.
-                Expert craftsmanship, innovative designs, and quality materials await.
+                Best POP ceiling and false ceiling contractor in Bhopal, Madhya Pradesh. Expert POP work, false ceiling installation, gypsum ceiling for homes and buildings. Expert craftsmanship, innovative designs, and quality materials await.
               </motion.p>
             </div>
 
@@ -62,7 +61,7 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <Link href="/contact">
-                <motion.button 
+                <motion.button
                   className="bg-red-500 text-white px-8 py-4 text-lg font-bold uppercase tracking-wider hover:bg-red-600 transition-all duration-300 relative overflow-hidden group"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -84,7 +83,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Right Side - Navigation & Info */}
-          <motion.div 
+          <motion.div
             className="space-y-12"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -93,7 +92,7 @@ const Footer = () => {
           >
             {/* Navigation */}
             <div>
-              <motion.h3 
+              <motion.h3
                 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6"
                 style={{ letterSpacing: '0.2em' }}
                 initial={{ opacity: 0, y: 20 }}
@@ -105,7 +104,8 @@ const Footer = () => {
               </motion.h3>
               <nav className="space-y-4">
                 {[
-                  { href: '/', label: 'HOME', isLink : true},
+                  { href: '/', label: 'HOME', isLink: true },
+                  { href: '/about', label: 'ABOUT', isLink: true },
                   { href: '/#trainings', label: 'SERVICES' },
                   { href: '/#gallery', label: 'GALLERY' },
                   { href: '/contact', label: 'CONTACT', isLink: true },
@@ -118,7 +118,7 @@ const Footer = () => {
                     viewport={{ once: true }}
                   >
                     {link.isLink ? (
-                      <Link 
+                      <Link
                         href={link.href}
                         className="block text-xl font-bold uppercase tracking-wide text-black hover:text-red-500 transition-colors duration-300 group"
                         style={{
@@ -162,7 +162,7 @@ const Footer = () => {
 
             {/* Social Links */}
             <div>
-              <motion.h3 
+              <motion.h3
                 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6"
                 style={{ letterSpacing: '0.2em' }}
                 initial={{ opacity: 0, y: 20 }}
@@ -172,7 +172,7 @@ const Footer = () => {
               >
                 CONNECT
               </motion.h3>
-              <motion.div 
+              <motion.div
                 className="flex gap-4 mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -180,10 +180,9 @@ const Footer = () => {
                 viewport={{ once: true }}
               >
                 {[
-                  { icon: Instagram, href: 'https://www.instagram.com/aamirenterprises', label: 'Instagram' },
-                  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-                  { icon: Globe, href: '#', label: 'Website' },
-                  { icon: Mail, href: 'mailto:info@aamirenterprises.com', label: 'Email' },
+                  { icon: Instagram, href: 'https://www.instagram.com/amkhan935?utm_source=qr&igsh=MTZ3c2ljOXFpdzZ0cw==', label: 'Instagram' },
+                  { icon: Youtube, href: 'https://youtube.com/@aamirbhai4956?si=7zGNIUJcKj4Muwv3', label: 'Youtube' },
+                  { icon: Mail, href: 'mailto:aamirbhai12245@gmail.com', label: 'Email' },
                 ].map((social, index) => (
                   <motion.a
                     key={social.label}
@@ -212,8 +211,8 @@ const Footer = () => {
               >
                 <div className="flex items-start gap-2">
                   <Home className="w-5 h-5 mt-0.5 text-red-500" />
-                  <a href="https://maps.app.goo.gl/66UsYoJdUnmzBKhr7" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 underline">
-                    MP Nagr Zone-2, Bhopal, Madhya Pradesh 462011
+                  <a href="https://maps.app.goo.gl/3BHeBYhy9Lg" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 underline">
+                    Sonia Gandhi colony, House no 1, Gali no 1, Ashoka Garden, Bhopal, Madhya Pradesh 453331
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
@@ -232,29 +231,29 @@ const Footer = () => {
         <div className="container-custom py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-4">
             {/* Logo & Copyright */}
-            <motion.div 
+            <motion.div
               className="flex flex-col md:flex-row items-center gap-4 md:gap-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <motion.button 
-                onClick={scrollToTop} 
+              <motion.button
+                onClick={scrollToTop}
                 className="group"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
                 <Image
                   src="/logo.svg"
-                  alt="Aamir Enterprises S"
+                  alt="Aamir Enterprises S - POP Ceiling & False Ceiling Contractor in Bhopal, Madhya Pradesh"
                   width={200}
                   height={96}
                   className="h-10 w-auto transition-opacity duration-300 group-hover:opacity-80"
                 />
               </motion.button>
 
-              <motion.p 
+              <motion.p
                 className="text-xs font-medium text-gray-600 uppercase tracking-wider text-center md:text-left"
                 style={{ letterSpacing: '0.1em' }}
               >
@@ -270,7 +269,7 @@ const Footer = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <Link 
+              <Link
                 href="#"
                 className="text-xs font-medium text-gray-500 hover:text-red-500 transition-colors duration-300 uppercase tracking-wider"
                 style={{ letterSpacing: '0.1em' }}

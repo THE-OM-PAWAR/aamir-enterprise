@@ -1,18 +1,24 @@
-'use client';
-
+import dynamic from 'next/dynamic';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import MissionSection from '@/components/MissionSection';
 import TrainingsSection from '@/components/services';
 import GallerySection from '@/components/GallerySection';
-import MembershipSection from '@/components/MembershipSection';
 import TempleSection from '@/components/TempleSection';
 import Footer from '@/components/Footer';
-import LoadingAnimation from '@/components/LoadingAnimation';
+import HomePageSchema from '@/components/schema/HomePageSchema';
 
+// Dynamically import the LoadingAnimation component with SSR disabled
+// This is because it uses client-side effects that aren't needed for initial render
+const LoadingAnimation = dynamic(() => import('@/components/LoadingAnimation'), {
+  ssr: false,
+});
+
+// This is a Server Component by default
 export default function Home() {
   return (
     <>
+      <HomePageSchema />
       <LoadingAnimation />
       <main className="min-h-screen bg-black text-white">
         <Header />
@@ -20,7 +26,6 @@ export default function Home() {
         <MissionSection />
         <GallerySection />
         <TrainingsSection />
-        {/* <MembershipSection /> */}
         <TempleSection />
         <Footer />
       </main>

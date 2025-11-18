@@ -167,7 +167,7 @@ export default function GallerySection() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="w-8 h-px bg-red-500"></div>
-              <span className="text-caption text-white/40 text-xs uppercase tracking-wider">Our Gallery</span>
+              <span className="text-caption text-white/40 text-xs uppercase tracking-wider">POP Ceiling & False Ceiling Gallery - Bhopal Projects</span>
             </motion.div>
             
             <motion.div
@@ -226,7 +226,7 @@ export default function GallerySection() {
                   <div className="relative aspect-[3/4] overflow-hidden rounded-lg md:rounded-xl bg-black border border-white/5 group-hover:border-red-500/20 transition-all duration-500">
                     <img
                       src={item.src}
-                      alt={item.title}
+                      alt={`${item.title} - ${item.description} by Aamir Enterprises S, POP Ceiling & False Ceiling Contractor in Bhopal, Madhya Pradesh`}
                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                     />
                     
