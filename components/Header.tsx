@@ -44,7 +44,7 @@ export default function Header() {
           >
             <Image
               src={isScrolled ? "/logo-white.svg" : "/logo.svg"}
-              alt="AAMIR ENTERPRISES"
+              alt="Aamir Enterprises S"
               width={150}
               height={86}
               className="h-12 w-auto transition-opacity duration-300"

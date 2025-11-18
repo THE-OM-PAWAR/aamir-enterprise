@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Aamir Enterprises - Designing Ceilings that Define Spaces',
-  description: 'Transform your spaces with Aamir Enterprises. Premium false ceiling designs, POP work, PVC panels, and decorative lighting solutions that redefine interiors.',
+  title: 'Aamir Enterprises s - Designing Ceilings that Define Spaces',
+  description: 'Transform your spaces with Aamir Enterprises s. Premium false ceiling designs, POP work, PVC panels, and decorative lighting solutions that redefine interiors.',
   keywords: 'false ceiling, POP design, PVC panels, decorative lighting, interior design, ceiling contractors, gypsum ceiling',
 };
 

@@ -5,7 +5,7 @@ import { ArrowRight, MapPin, MessageCircle } from 'lucide-react';
 export default function HeroSection() {
   const handleWhatsAppClick = () => {
     const whatsappNumber = '+1234567890'; // Replace with actual WhatsApp number
-    const message = 'Hi! I\'m interested in joining Gymnacity. Can you provide more information?';
+    const message = 'Hi! I\'m interested in joining Aamir Enterprises . Can you provide more information?';
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     

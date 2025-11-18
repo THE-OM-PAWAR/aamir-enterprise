@@ -49,7 +49,7 @@ const Footer = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                Experience premium ceiling solutions with Aamir Enterprises.
+                Experience premium ceiling solutions with Aamir Enterprises s.
                 Expert craftsmanship, innovative designs, and quality materials await.
               </motion.p>
             </div>
@@ -247,7 +247,7 @@ const Footer = () => {
               >
                 <Image
                   src="/logo.svg"
-                  alt="AAMIR ENTERPRISES"
+                  alt="Aamir Enterprises S"
                   width={200}
                   height={96}
                   className="h-10 w-auto transition-opacity duration-300 group-hover:opacity-80"
@@ -258,7 +258,7 @@ const Footer = () => {
                 className="text-xs font-medium text-gray-600 uppercase tracking-wider text-center md:text-left"
                 style={{ letterSpacing: '0.1em' }}
               >
-                AAMIR ENTERPRISES © {currentYear}
+                Aamir Enterprises S © {currentYear}
               </motion.p>
             </motion.div>
 

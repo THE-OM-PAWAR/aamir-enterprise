@@ -243,7 +243,7 @@ export default function ContactPage() {
                 className="aspect-[4/3] bg-zinc-900 rounded-lg overflow-hidden relative"
               >
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3682.43673772463!2d75.8142281!3d22.6374996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fbe8bfd81fe7%3A0xe32bb56403393ac9!2sGYMNACITY%20The%20Body%20Technician!5e0!3m2!1sen!2sin!4v1750163177735!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3682.43673772463!2d75.8142281!3d22.6374996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fbe8bfd81fe7%3A0xe32bb56403393ac9!2sAamir Enterprises %20The%20Body%20Technician!5e0!3m2!1sen!2sin!4v1750163177735!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
