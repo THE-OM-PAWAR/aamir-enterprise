@@ -32,18 +32,28 @@ export default function HeroSection() {
         {/* Image Container - Enhanced mobile responsiveness */}
         <div className="relative w-full max-w-6xl mx-auto">
           <div className="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden aspect-[3/4] sm:aspect-[4/3] md:aspect-[16/10] lg:aspect-[2.2/1] shadow-lg sm:shadow-xl lg:shadow-2xl animate-fadeInUp">
-            <img 
+            <img
               src="https://images.pexels.com/photos/6585759/pexels-photo-6585759.jpeg?auto=compress&cs=tinysrgb&w=1920"
               alt="Modern False Ceiling Design"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-center hidden sm:block"
             />
+
+            <video
+              autoPlay
+              muted
+              loop
+              className="w-full h-full object-cover object-center block sm:hidden"
+            >
+              <source src="/video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
             
             {/* Enhanced gradient overlay for better text readability */}
             <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/60"></div>
             
             {/* Text Overlay - Better mobile scaling */}
-            <div className="absolute inset-0 flex items-center justify-center px-3 sm:px-4 lg:px-6">
-              <h2 className="text-[3rem] leading-[0.8] sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black tracking-tight text-white text-center">
+            <div className="absolute inset-0 flex items-center justify-center px-2 sm:px-3 lg:px-4">
+              <h2 className="text-2xl leading-[0.95] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black tracking-tight text-white text-center">
                 <span className="block drop-shadow-2xl text-shadow-lg">CEILINGS THAT</span>
                 <span className="block drop-shadow-2xl text-shadow-lg">INSPIRE.</span>
               </h2>
