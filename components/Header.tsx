@@ -219,20 +219,6 @@ export default function Header() {
                 )
               ))}
             </div>
-            
-            {/* Creative buttons */}
-            <div className={`mt-auto pt-16 grid grid-cols-2 gap-4 transition-all duration-700 transform ${
-              isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`} style={{ transitionDelay: `${navItems.length * 100 + 400}ms` }}>
-              <button className="group relative overflow-hidden px-6 py-3 border border-white/10 rounded-sm bg-transparent">
-                <span className="absolute inset-0 w-0 bg-gradient-to-r from-red-500/20 to-red-500/10 transition-all duration-500 ease-out group-hover:w-full"></span>
-                <span className="relative text-xs tracking-[0.3em] uppercase text-white/80 group-hover:text-white">Contact</span>
-              </button>
-              <button className="group relative overflow-hidden px-6 py-3 border border-white/10 rounded-sm bg-transparent">
-                <span className="absolute inset-0 w-0 bg-gradient-to-r from-white/10 to-white/5 transition-all duration-500 ease-out group-hover:w-full"></span>
-                <span className="relative text-xs tracking-[0.3em] uppercase text-white/80 group-hover:text-white">Quote</span>
-              </button>
-            </div>
           </div>
         </div>
       </div>
