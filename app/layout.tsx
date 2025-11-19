@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   title: 'Aamir POP work Bhopal | POP Ceiling Bhopal | False Ceiling Contractor in Madhya Pradesh | Aamir Enterprises Bhopal | Aamir POP works',
   description: 'Aamir POP work Bhopal - Best POP ceiling and false ceiling contractor in Ashoka Garden, Bhopal, Madhya Pradesh. Expert POP work, false ceiling installation, gypsum ceiling, and PVC panels for homes and buildings. Contact Aamir Enterprises S or Aamir POP works for premium ceiling solutions.',
   keywords: 'Aamir POP work Bhopal, POP ceiling Ashoka Garden Bhopal, false ceiling Ashoka Garden Bhopal, POP work Ashoka Garden Bhopal, POP ceiling Bhopal, false ceiling Bhopal, POP work Bhopal, false ceiling contractor Bhopal, POP ceiling Madhya Pradesh, false ceiling installation Bhopal, gypsum ceiling Bhopal, POP ceiling contractor MP, ceiling work Bhopal, best POP ceiling Bhopal, POP designer Bhopal, false ceiling service Bhopal, POP ceiling price Bhopal, Aamir Enterprises Bhopal, Aamir POP works, Ashoka Garden Bhopal Madhya Pradesh, POP ceiling contractor Ashoka Garden',
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
+  },
 };
 
 export default function RootLayout({

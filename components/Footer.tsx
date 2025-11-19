@@ -212,13 +212,13 @@ const Footer = () => {
                 <div className="flex items-start gap-2">
                   <Home className="w-5 h-5 mt-0.5 text-red-500" />
                   <a href="https://maps.app.goo.gl/3BHeBYhy9Lg" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 underline">
-                    Sonia Gandhi colony, House no 1, Gali no 1, Ashoka Garden, Bhopal, Madhya Pradesh 453331
+                    Sonia Gandhi colony, House no 1, Gali no 1, Ashoka Garden, Bhopal, Madhya Pradesh 462023
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-5 h-5 text-red-500" />
+                  <a href="tel:919713046238" className="hover:text-red-500 underline">+91 97130 46238</a>
                   <a href="tel:919399857669" className="hover:text-red-500 underline">+91 93998 57669</a>
-                  <a href="tel:9199713046238" className="hover:text-red-500 underline">+91 99713 046238</a>
                 </div>
               </motion.div>
             </div>

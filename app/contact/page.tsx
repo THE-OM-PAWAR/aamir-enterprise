@@ -13,12 +13,17 @@ export default function ContactPage() {
     {
       icon: 'MapPin',
       title: 'Location',
-      details: ['Sonia Gandhi colony, House no 1, Gali no 1, Ashoka Garden, Bhopal, Madhya Pradesh 453331']
+      details: ['Sonia Gandhi colony, House no 1, Gali no 1, Ashoka Garden, Bhopal, Madhya Pradesh 462023']
+    },
+    {
+      icon: 'Whatsapp',
+      title: 'Whatsapp',
+      details: ['+91 93998 57669']
     },
     {
       icon: 'Phone',
       title: 'Phone',
-      details: ['+91 93998 57669']
+      details: ['+91 97130 46238']
     },
     {
       icon: 'Mail',
