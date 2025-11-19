@@ -1,32 +1,40 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // IMPORTANT: Make sure this matches EXACTLY with your verified property in Google Search Console
-  // Check if your property is verified as:
-  // - https://aamirenterprises.com (no www)
-  // - https://www.aamirenterprises.com (with www)
-  // The URLs must match exactly, including www or no www
+  // CRITICAL: The baseUrl MUST match EXACTLY with your Google Search Console verified property URL
+  // 
+  // How to check your verified property:
+  // 1. Go to Google Search Console: https://search.google.com/search-console
+  // 2. Look at the top-left corner - it shows your property URL
+  // 3. Check if it's:
+  //    - https://aamirenterprises.com (no www) ✓ Use this
+  //    - https://www.aamirenterprises.com (with www) ✗ Change baseUrl below
+  //
+  // If your property shows www, change the baseUrl to: 'https://www.aamirenterprises.com'
+  // The domain MUST match exactly - Google rejects sitemaps with mismatched domains
   
-  const baseUrl = 'https://aamirenterprises.com'; // Change to https://www.aamirenterprises.com if your property has www
-  const currentDate = new Date().toISOString();
+  const baseUrl = 'https://aamirenterprises.com'; 
+  // If your property is verified with www, use: 'https://www.aamirenterprises.com'
+  
+  const currentDate = new Date();
   
   return [
     {
-      url: baseUrl,
+      url: `${baseUrl}`,
       lastModified: currentDate,
-      changeFrequency: 'weekly',
+      changeFrequency: 'weekly' as const,
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
   ];
