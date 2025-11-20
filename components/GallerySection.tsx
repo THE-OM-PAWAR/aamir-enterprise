@@ -1,14 +1,18 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Play, ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Play, ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 export default function GallerySection() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeCategory, setActiveCategory] = useState('all');
+  const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
+  const touchStartX = useRef<number>(0);
+  const touchEndX = useRef<number>(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,8 +39,6 @@ export default function GallerySection() {
   ];
 
   const galleryItems = [
- 
-   
     {
       id: 11,
       category: 'facilities',
@@ -66,7 +68,7 @@ export default function GallerySection() {
       category: 'facilities',
       type: 'image',
       src: '/gallery4.jpeg',
-      title: 'Soft Glow Box Ceiling',
+      title: 'Jali Ceiling',
       description: 'A modern ceiling with soft recessed lighting and elegant box-shaped patterns.'
     },
     {
@@ -97,38 +99,164 @@ export default function GallerySection() {
       id: 18,
       category: 'facilities',
       type: 'image',
-      src: '/gallery8.jpeg',
-      title: 'Wooden Layered Ceiling',
-      description: 'A warm ceiling design with layered wooden panels and soft indirect lighting.'
+      src: '/gallery12.jpeg',
+      title: 'MDF Ceiling Design',
+      description: 'Premium MDF ceiling with contemporary patterns and integrated lighting solutions.'
     },
     {
       id: 19,
       category: 'facilities',
       type: 'image',
-      src: '/gallery9.jpeg',
-      title: 'Royal Floral Ceiling',
-      description: 'A luxurious ceiling with ornate floral patterns and a grand chandelier centerpiece.'
-    }, {
-      id: 9,
-      category: 'facilities',
-      type: 'image',
-      src: '/gallery10.jpeg',
-      title: 'Golden Panel Ceiling',
-      description: 'A modern ceiling with golden panel designs and a modern chandelier centerpiece.'
+      src: '/gallery13.jpeg',
+      title: 'Modern MDF Ceiling',
+      description: 'Sleek MDF ceiling design featuring clean lines and sophisticated finish.'
     },
     {
-      id: 10,
+      id: 20,
       category: 'facilities',
       type: 'image',
-      src: '/gallery11.jpeg',
-      title: '3D Wall Design',
-      description: 'A 3D wall design with a modern look and feel.'
+      src: '/gallery14.jpeg',
+      title: 'MDF Lift Design',
+      description: 'Elegant MDF lift interior with modern paneling and ambient lighting.'
+    },
+    {
+      id: 21,
+      category: 'facilities',
+      type: 'image',
+      src: '/gallery15.jpeg',
+      title: 'Acrylic 3D Ceiling Design',
+      description: 'Stunning acrylic 3D ceiling with dynamic patterns and LED backlighting.'
+    },
+    {
+      id: 22,
+      category: 'facilities',
+      type: 'image',
+      src: '/gallery16.jpeg',
+      title: 'PVC Louvers',
+      description: 'Functional PVC louver system with excellent ventilation and aesthetic appeal.'
+    },
+    {
+      id: 23,
+      category: 'facilities',
+      type: 'image',
+      src: '/gallery17.jpeg',
+      title: 'Profile Lights',
+      description: 'Architectural profile lighting creating dramatic ceiling illumination effects.'
+    },
+    {
+      id: 24,
+      category: 'facilities',
+      type: 'image',
+      src: '/gallery18.jpeg',
+      title: 'ACP Sheets Design',
+      description: 'Durable ACP sheet installation with weather-resistant and fire-retardant properties.'
+    },
+    {
+      id: 25,
+      category: 'facilities',
+      type: 'image',
+      src: '/gallery19.jpeg',
+      title: 'PVC Panels',
+      description: 'Waterproof PVC panels perfect for moisture-prone areas with easy maintenance.'
+    },
+    {
+      id: 26,
+      category: 'facilities',
+      type: 'image',
+      src: '/gallery20.jpeg',
+      title: '2x8 Wall Panels',
+      description: 'Decorative 2x8 wall panels adding texture and depth to interior spaces.'
+    },
+    {
+      id: 27,
+      category: 'facilities',
+      type: 'image',
+      src: '/gallery21.jpeg',
+      title: 'PVC Beadings',
+      description: 'Precision PVC beadings providing clean finishing touches to ceiling edges.'
+    },
+    {
+      id: 28,
+      category: 'facilities',
+      type: 'image',
+      src: '/gallery22.jpeg',
+      title: 'POP False Ceiling',
+      description: 'Classic POP false ceiling with smooth finish and customizable design options.'
     },
   ];
 
   const filteredItems = activeCategory === 'all' 
     ? galleryItems 
     : galleryItems.filter(item => item.category === activeCategory);
+
+  const openFullscreen = (index: number) => {
+    setCurrentImageIndex(index);
+    setIsFullscreenOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeFullscreen = () => {
+    setIsFullscreenOpen(false);
+    document.body.style.overflow = 'unset';
+  };
+
+  const navigateImage = (direction: 'prev' | 'next') => {
+    if (direction === 'prev') {
+      setCurrentImageIndex(prev => 
+        prev === 0 ? filteredItems.length - 1 : prev - 1
+      );
+    } else {
+      setCurrentImageIndex(prev => 
+        prev === filteredItems.length - 1 ? 0 : prev + 1
+      );
+    }
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    
+    const distance = touchStartX.current - touchEndX.current;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      navigateImage('next');
+    }
+    if (isRightSwipe) {
+      navigateImage('prev');
+    }
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isFullscreenOpen) return;
+      
+      if (e.key === 'Escape') {
+        closeFullscreen();
+      } else if (e.key === 'ArrowLeft') {
+        navigateImage('prev');
+      } else if (e.key === 'ArrowRight') {
+        navigateImage('next');
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isFullscreenOpen]);
+
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
@@ -222,6 +350,7 @@ export default function GallerySection() {
                   animate={isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5, delay: 0.1 * index }}
                   whileHover={{ scale: 1.02 }}
+                  onClick={() => openFullscreen(index)}
                 >
                   <div className="relative aspect-[3/4] overflow-hidden rounded-lg md:rounded-xl bg-black border border-white/5 group-hover:border-red-500/20 transition-all duration-500">
                     <img
@@ -293,6 +422,88 @@ export default function GallerySection() {
           </div>
         </motion.div>
       </div>
+
+      {/* Fullscreen Image Viewer */}
+      <AnimatePresence>
+        {isFullscreenOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-center justify-center"
+            onClick={closeFullscreen}
+          >
+            {/* Close Button */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                closeFullscreen();
+              }}
+              className="absolute top-4 right-4 w-12 h-12 bg-black/70 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-red-500/30 hover:border-red-500/50 transition-all duration-300 z-[100]"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                navigateImage('prev');
+              }}
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/70 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-red-500/30 hover:border-red-500/50 transition-all duration-300 z-[100]"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                navigateImage('next');
+              }}
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-black/70 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-red-500/30 hover:border-red-500/50 transition-all duration-300 z-[100]"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            {/* Image Container */}
+            <motion.div
+              key={currentImageIndex}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative w-full h-full flex items-center justify-center p-16 md:p-20"
+              onClick={(e) => e.stopPropagation()}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
+              <img
+                src={filteredItems[currentImageIndex]?.src}
+                alt={`${filteredItems[currentImageIndex]?.title} - ${filteredItems[currentImageIndex]?.description}`}
+                className="max-w-full max-h-full object-contain z-10"
+                style={{ objectFit: 'contain' }}
+              />
+              
+              {/* Image Info */}
+              <div className="absolute bottom-4 left-4 right-4 bg-black/70 backdrop-blur-sm rounded-lg p-4 border border-white/20 z-[90]">
+                <h3 className="text-lg md:text-xl font-bold text-white mb-2">
+                  {filteredItems[currentImageIndex]?.title}
+                </h3>
+                <p className="text-sm text-white/70">
+                  {filteredItems[currentImageIndex]?.description}
+                </p>
+                <div className="flex items-center justify-between mt-3">
+                  <span className="text-xs text-white/50">
+                    {currentImageIndex + 1} of {filteredItems.length}
+                  </span>
+                  <div className="w-8 h-px bg-red-500" />
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Custom scrollbar hide styles */}
       <style jsx>{`

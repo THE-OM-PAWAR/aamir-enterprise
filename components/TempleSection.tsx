@@ -26,7 +26,6 @@ export default function TempleSection() {
 
   const stats = [
     { number: '500+', label: 'Projects' },
-    { number: '50+', label: 'Happy Clients' },
     { number: '15+', label: 'Years' },
     { number: '100%', label: 'Satisfaction' }
   ];
