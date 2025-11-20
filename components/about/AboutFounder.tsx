@@ -17,7 +17,7 @@ export default function AboutFounder() {
           >
             <div className="absolute inset-0 w-full h-full rounded-lg overflow-hidden">
               <Image 
-                src="/founder.jpg" 
+                src="/founder.jpeg" 
                 alt="Aamir Khan - Founder of Aamir POP works with 15+ years of experience in POP ceiling and false ceiling work in Bhopal, Madhya Pradesh"
                 width={600}
                 height={800}
